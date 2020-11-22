@@ -1,0 +1,58 @@
+
+.wrapper{
+    background-color: #f0f0f0;
+    padding: 30px;
+}
+
+.card{
+    -webkit-box-shadow: 1px 3px 16px 0px rgba(57, 50, 50, 0.39);
+    -moz-box-shadow:    1px 3px 16px 0px rgba(57, 50, 50, 0.39);
+    box-shadow:         1px 3px 16px 0px rgba(57, 50, 50, 0.39);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.title {
+    
+   font-family: 'Permanent Marker', cursive;
+   /* position: absolute; */
+   width: 100vw;
+   text-align: center;
+   margin: 50px;
+   height: 96px;
+   /* left: calc(50% - 284px/2);
+   top: calc(50% - 96px); */
+
+   font-style: normal;
+   font-weight: bold;
+   line-height: normal;
+   font-size: 64px;
+   text-align: center;
+   letter-spacing: -2px;
+
+   background: -moz-linear-gradient(127deg, rgba(72,198,239,1) 0%, rgba(111,134,214,1) 100%);
+background: -webkit-linear-gradient(127deg, rgba(72,198,239,1) 0%, rgba(111,134,214,1) 100%);
+background: linear-gradient(127deg, rgba(72,198,239,1) 0%, rgba(111,134,214,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#48c6ef",endColorstr="#6f86d6",GradientType=1);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+animation: 1s ease-out 0s 1 slide;
+ }
+
+
+::selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+
+
+ @keyframes slide {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 100;
+}
+}
