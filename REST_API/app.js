@@ -30,8 +30,10 @@ app.use(session({
   }))
 
 
-const _twitterConsumerKey = "j4tlebxTDaYve8oNyPGCQRHJn";
-const _twitterConsumerSecret = "p1J9sf9oYlxoM31Gf2M1Ub2YhgmxT16wNrb9SMBe9aCCeBszY7";
+const _twitterConsumerKey = process.env.TWITTER_CONSUMER_KEY;
+const _twitterConsumerSecret = process.env.TWITTER_CONSUMER_SECRET;
+const _accessTokenKey = process.env.ACCESS_TOKEN_KEY;
+const _acccessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 
 const consumer = () => {
     return new oauth.OAuth(
@@ -144,8 +146,8 @@ app.post("/status" , async (req,res) => {
         var client = new Twitter({
             consumer_key: _twitterConsumerKey,
             consumer_secret: _twitterConsumerSecret,
-            access_token_key: "1329163910436380672-fC6wJAWiGoRq6hx0bqw1j1KunwSZJL",
-            access_token_secret: "zkdt849Z3Lub4EQcMU0FlkZL45JrA9NCsz0dXO19hGl8D"
+            access_token_key: _accessTokenKey,
+            access_token_secret: _accessTokenSecret
           });
         try{
             const response = await postPromise(client,statusBody);
